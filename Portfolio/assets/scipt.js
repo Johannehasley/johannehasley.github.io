@@ -16,3 +16,11 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         });
     });
 });
+
+// Animation au chargement
+window.addEventListener('load', () => {
+    const elements = document.querySelectorAll('.animate-pop-in');
+    elements.forEach((el, index) => {
+        el.style.animationDelay = `${index * 0.2}s`;
+    });
+});
